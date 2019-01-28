@@ -13,30 +13,87 @@
 - when var try = 0 then function lose() runs to move up the lose counter by 1 and then function newGame() runs again try counter is reset
 */
 
-var names = [
-    "Dobby",
-    "Gellert Grindelwald",
-    "Ginny Weasley",
-    "Gilderoy Lockhart",
-    "Albus Severus Potter",
-    "Molly Weasley",
-    "Alastor Moody",
-    "Minerva McGonagall",
-    "Dolores Umbridge",
-    "Lucius Malfoy",
-    "Newt Scamander",
-    "Remus Lupin",
-    "Luna Lovegood",
-    "Rubeus Hagrid",
-    "George Weasley",
-    "Bellatrix Lestrange",
-    "Draco Malfoy",
-    "Sirius Black",
-    "Voldemort",
-    "Neville Longbottom",
-    "Albus Dumbledore",
-    "Severus Snape",
-    "Ron Weasley",
-    "Hermione Granger",
-    "Harry Potter"
+/* Psuedo code
+user press key {
+    if certain letter then end game
+    else {start game by picking a random word}
+}
+
+once a random word has been picked {
+    if guess is right show letter on answer
+    else {show in guessed letter}
+    else if {all letters guessed mark win}
+    else if {number of tries = 0 mark lose}
+}
+
+and somehow the wordArray has to show up as _ _ _ _ _ _ on the web page
+
+*/
+
+
+//Defining all the variables in game. will need to move them within scope to avoid pollution as much as possible...
+
+var spells = []; // the array of possible words
+var word; // word selected for the round
+var guess; // letter inputed by user
+var guesses = []; // stored guesses
+var tries; // # tries left
+var win; // # of wins
+var loss; // # of losses
+
+
+document.onkeypress = function(){
+    // here should a gameStart() function that executes the game start
+    // if number 1 pressed - end game 
+    // else start game
+}
+
+function gameStart(){
+    //something in here to start game
+}
+
+function gameEnd(){
+    //something in here to signal game end
+}
+
+var spells = [
+    "accio",
+    "aparecium",
+    "riddikulus",
+    "expelliarmus",
+    "colloportus",
+    "duro",
+    "geminio",
+    "engorgio",
+    "incendio",
+    "immobulus",
+    "fumos",
+    "impedimenta",
+    "imperio",
+    "lumos",
+    "obliviate",
+    "reparo",
+    "nox",
+    "protego",
+    "reducio",
+    "reducto",
+    "repello",
+    "scourgify",
+    "spongify",
+    "stupefy",
+    "alohomora",
+    "evanesco",
 ];
+
+
+var spell = spells[Math.floor(Math.random()*nameList.length)]; // this randomly selects form the array
+var spell = [];
+
+for (var i=0; i < spells.length; i++) {
+    spell[i] = " _ ";
+}
+
+console.log(randomName);
+console.log(answerName); // display properly
+
+

@@ -3,24 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Word Guess Game</title>
     <style rel="stylesheet" type="text/css" src="assets/css/reset.css"></style>
     <style rel="stylesheet" type="text/css" src="assets/css/style.css"></style>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+
 </head>
 <body>
     <h1>Word Game</h1>
 
-    <p>Guess who I am thinking of... &lt;hint&gt; Obviously I am a HP character!</p>
+    <p>Avada Kedavra!!! JUST KIDDING.</p>
+
+    <p id="showSpell"><!--This should show the word picked for game. correct letters show up in upper case--></p>
     
     <p>Wins</p>
-
+    <p id="showWin"><!-- This should show a win counter --></p>
     <p>Loss</p>
+    <p id="showLoss"><!-- This should show a lose counter --></p>
 
-    <p>Number of guesses left</p>
+    <p>Number of tries left</p>
+    <p id="showTries"><!-- This should show number of guesses left counting down from 9 --></p>
 
     <p>Letters guessed</p>
+    <p id="myGuesses"><!-- This should show all the letters that have been tried but only display each letter only once (all lower case)--></p>
 
-    <style type="text/javascript" scr="assets/javascript/game.js"></style>
 </body>
 </html>
