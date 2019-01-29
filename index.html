@@ -6,6 +6,7 @@
     <title>Guess This!</title> 
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script type="text/javascript" src="assets/javascript/game.js"></script>
 
@@ -13,33 +14,30 @@
 <body>
     <wrapper class="d-flex flex-column">
         <!-- header -->
-        <div class="card">
-            <nav class="navbar navbar-expand-md">
-            <div class="navbar-brand"><img src="/docs/4.2/assets/brand/bootstrap-solid.svg" width="30" height="30" alt=""></div>
-            <h1 class="">Guess This HP Spell!</h1>
-            </nav>            
-        </div>
-        <div class="">
-            <div class="card">
-            <div class="card-body">
-                <h1 class="card-title title-custom">Avada Kedavra!!! (Kidding!)</h1>
+        <div class="card col-5 offset-1 mt-4" id="main" >
+            <div class="mx-auto pt-4"><img id="logo" src="assets/images/deathly-hallows.png" alt="deathly-hallows"></div>
+            <div class="card-body mx-auto">
+                <h1 class="card-title title-custom">Guess This Spell</h1>
                 <p id="showSpell"><!--This should show the word picked for game. correct letters show up in upper case--></p>
-    
-                <p>Wins</p>
-                <p id="showWin"><!-- This should show a win counter --></p>
-                <p>Loss</p>
-                <p id="showLoss"><!-- This should show a lose counter --></p>
-            
-                <p>Number of tries left</p>
-                <p id="showTries"><!-- This should show number of guesses left counting down from 9 --></p>
-            
-                <p>Letters guessed</p>
-                <p id="myGuesses"><!-- This should show all the letters that have been tried but only display each letter only once (all lower case)--></p>
-            
-            </div>
+                <div class="row text-center">
+                <p class="col-6">Wins</p>
+                <p class="col-6">Loss</p>
+                </div>
+                <div class="row text-center">
+                <p class="col-6" id="showWin"><!-- This should show a win counter --></p>
+                <p class="col-6" id="showLoss"><!-- This should show a lose counter --></p>
+                </div>
+                <div class="row text-center">
+                <p class="col-12">Tries left</p>
+                <p class="col-12"id="showTries"><!-- This should show number of guesses left counting down from 9 --></p>
+                </div>
+                <div class="row text-center">
+                <p class="col-12">Letters guessed</p>
+                <p class="col-12" id="myGuesses"><!-- This should show all the letters that have been tried but only display each letter only once (all lower case)--></p>
+                </div>
             </div>
         </div>
-        <footer>
+        <footer class="col-5 offset-1 text-center">
             Copyright &copy;
         </footer>
     </wrapper>       
