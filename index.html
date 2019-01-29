@@ -2,30 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Word Guess Game</title>
-    <style rel="stylesheet" type="text/css" src="assets/css/reset.css"></style>
-    <style rel="stylesheet" type="text/css" src="assets/css/style.css"></style>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Guess This!</title> 
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script type="text/javascript" src="assets/javascript/game.js"></script>
 
 </head>
 <body>
-    <h1>Word Game</h1>
-
-    <p>Avada Kedavra!!! JUST KIDDING.</p>
-
-    <p id="showSpell"><!--This should show the word picked for game. correct letters show up in upper case--></p>
+    <wrapper class="d-flex flex-column">
+        <!-- header -->
+        <div class="card">
+            <nav class="navbar navbar-expand-md">
+            <div class="navbar-brand"><img src="/docs/4.2/assets/brand/bootstrap-solid.svg" width="30" height="30" alt=""></div>
+            <h1 class="">Guess This HP Spell!</h1>
+            </nav>            
+        </div>
+        <div class="">
+            <div class="card">
+            <div class="card-body">
+                <h1 class="card-title title-custom">Avada Kedavra!!! (Kidding!)</h1>
+                <p id="showSpell"><!--This should show the word picked for game. correct letters show up in upper case--></p>
     
-    <p>Wins</p>
-    <p id="showWin"><!-- This should show a win counter --></p>
-    <p>Loss</p>
-    <p id="showLoss"><!-- This should show a lose counter --></p>
-
-    <p>Number of tries left</p>
-    <p id="showTries"><!-- This should show number of guesses left counting down from 9 --></p>
-
-    <p>Letters guessed</p>
-    <p id="myGuesses"><!-- This should show all the letters that have been tried but only display each letter only once (all lower case)--></p>
+                <p>Wins</p>
+                <p id="showWin"><!-- This should show a win counter --></p>
+                <p>Loss</p>
+                <p id="showLoss"><!-- This should show a lose counter --></p>
+            
+                <p>Number of tries left</p>
+                <p id="showTries"><!-- This should show number of guesses left counting down from 9 --></p>
+            
+                <p>Letters guessed</p>
+                <p id="myGuesses"><!-- This should show all the letters that have been tried but only display each letter only once (all lower case)--></p>
+            
+            </div>
+            </div>
+        </div>
+        <footer>
+            Copyright &copy;
+        </footer>
+    </wrapper>       
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
     <!--Credit for photo if using platform one Photo by Sarah Ehlers on Unsplash -->
     <!--credit for deathly hollow icon <div>Icons made by <a href="https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>-->
