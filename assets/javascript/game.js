@@ -32,11 +32,14 @@
 
 // picke a random word from the list
     var randomSpell = spell[Math.floor(Math.random()*spell.length)]; // this randomly selects form the array
-// help // store that random word in a variable in the form of a question
+// store that random word in a variable in the form of a question
     var question = [];
-    for (var i = 0; 1 < randomSpell.length; i++){
+    for (var i = 0; i < randomSpell.length; i++){
         question.push("_");
     }
+
+    console.log(randomSpell);
+    console.log(question);
 
 // define a variable that stores total # of tries
     var tries = 10;
@@ -46,11 +49,25 @@
     // see if i can get program to flash this line until user enters a key
     // use if else statment to also assign "1" as end game key
 
-// listen to the key event
+
+    
+// listen to the key event for guesses
 // store key event
-// check if key pressed matches at each position of the word
-// revewal positions matching key pressed
+// stores only alphabets and no recurring characters
+// display guesses
+    var guesses = [];
+    window.addEventListener("keyup",function(e){
+        if (event.keyCode <= 90 && event.keyCode >= 65 && guesses.indexOf(event.key) == -1){
+            guesses.push(event.key.toLowerCase());
+        }
+        // check if key pressed matches at each position of the word
+        if (randomSpell.indexOf(guesses)    
+    })
+
+
+// reveal positions matching key pressed
 // else     decrease total number of tries by one
+
 
 // if total number of tries = 0
 // then score = score -1
