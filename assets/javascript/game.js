@@ -43,6 +43,8 @@
 
 // define a variable that stores total # of tries
     var tries = 10;
+    document.getElementById("showTries").innerText = tries;
+
 
 // have user enter a key
     // Include "Press any key to get started" within HTML.
