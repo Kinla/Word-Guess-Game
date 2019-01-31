@@ -52,18 +52,17 @@
 
     
 // listen to the key event for guesses
-// store key event
-// stores only alphabets and no recurring characters
-// display guesses
     var guesses = [];
     window.addEventListener("keyup",function(e){
+        // stores only alphabets and no recurring characters
         if (event.keyCode <= 90 && event.keyCode >= 65 && guesses.indexOf(event.key) == -1){
             guesses.push(event.key.toLowerCase());
-        }
-        // check if key pressed matches at each position of the word
-        if (randomSpell.indexOf(guesses)    
+            document.getElementById("showGuess").innerHTML = guesses;
+        };
     })
+        // check if key pressed matches at each position of the word
 
+// display guesses
 
 // reveal positions matching key pressed
 // else     decrease total number of tries by one
