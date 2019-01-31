@@ -18,22 +18,33 @@
             <div class="mx-auto pt-4"><img id="logo" src="assets/images/deathly-hallows.png" alt="deathly-hallows"></div>
             <div class="card-body mx-auto">
                 <h1 class="card-title title-custom">Guess This Spell</h1>
-                <p id="showSpell"><!--This should show the word picked for game. correct letters show up in upper case--></p>
+                <p class="text-center">Press any key to start!</p>
+                <br>
+                <p id="showQuestion"><!--This should show the word picked for game. correct letters show up in upper case--></p>
+                <br>
                 <div class="row text-center">
-                <p class="col-6">Wins</p>
-                <p class="col-6">Loss</p>
+                    <div class="col-6">
+                        <p>Win</p>
+                        <p id="showWin"><!-- This should show a win counter --></p>
+                    </div>
+                    <div class="col-6">
+                        <p>loss</p>
+                        <p id="showLoss"><!-- This should show a win counter --></p>
+                    </div>
                 </div>
+                <br>
                 <div class="row text-center">
-                <p class="col-6" id="showWin"><!-- This should show a win counter --></p>
-                <p class="col-6" id="showLoss"><!-- This should show a lose counter --></p>
+                    <div class="col-12">
+                        <p>Tries</p>
+                        <p id="showTries"><!-- This should show a win counter --></p>
+                    </div>
                 </div>
+                <br>
                 <div class="row text-center">
-                <p class="col-12">Tries left</p>
-                <p class="col-12"id="showTries"><!-- This should show number of guesses left counting down from 9 --></p>
-                </div>
-                <div class="row text-center">
-                <p class="col-12">Letters guessed</p>
-                <p class="col-12" id="myGuesses"><!-- This should show all the letters that have been tried but only display each letter only once (all lower case)--></p>
+                    <div class="col-12">
+                        <p>Guesses</p>
+                        <p id="showGuess"><!-- This should show a win counter --></p>
+                    </div>
                 </div>
             </div>
         </div>
