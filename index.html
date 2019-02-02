@@ -16,7 +16,7 @@
             <div class="mx-auto pt-4"><img id="logo" src="assets/images/deathly-hallows.png" alt="deathly-hallows"></div>
             <div class="card-body mx-auto">
                 <h1 class="card-title title-custom">Guess This Spell</h1>
-                <p class="text-center">Press any key to start!</p>
+                <p class="text-center" id="hide">Press any key to start!</p>
                 <p id="showQuestion"><!--This should show the word picked for game. correct letters show up in upper case--></p>
                 <br>
                 <div class="row text-center">
@@ -26,21 +26,19 @@
                     </div>
                     <div class="col-6">
                         <p>loss</p>
-                        <p id="showLoss"><!-- This should show a loss counter --></p>
+                        <p id="showLoss"><!--  This should show a loss counter --></p>
                     </div>
                 </div>
-                <br>
                 <div class="row text-center">
                     <div class="col-12">
                         <p>Tries</p>
                         <p id="showTries"><!-- This should show tries left --></p>
                     </div>
                 </div>
-                <br>
                 <div class="row text-center">
                     <div class="col-12">
                         <p>Guesses</p>
-                        <span id="showGuess"><!-- This should show all letters guessed --></span>
+                        <p class="text-uppercase" id="showGuess"><!-- This should show all letters guessed --></p>
                     </div>
                 </div>
             </div>

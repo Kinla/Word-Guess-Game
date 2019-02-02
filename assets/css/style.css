@@ -21,6 +21,9 @@ wrapper {
     align-items: stretch;
 }
 
+.card-title {
+    font-size: 1.5rem;
+}
 
 #main {
     background: rgb(143,149,154);

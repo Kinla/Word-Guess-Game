@@ -40,6 +40,7 @@ var game = {
     randomSpell: "", // the selected spell
     correctGuess: [], // chars guessed correctly
     win: 0, // total wins
+    winSound: new Audio("../music/hedwigs.mp3"),
     loss: 0, // total losses
     remainingTries: 0, // remaining guesses set to 0
     hasFinished: true, // if won or loss
@@ -66,6 +67,7 @@ var game = {
         for (var i = 0; i < this.randomSpell.length; i++){
             progress += (this.correctGuess[i] + " ");
         }
+
         document.querySelector("#showQuestion").innerHTML = progress;
         document.querySelector("#showTries").innerHTML = this.remainingTries;
         document.querySelector("#showGuess").innerHTML = this.guessedLetters.join(", ");
@@ -126,10 +128,14 @@ window.addEventListener("keyup", function(event){
     if (game.hasFinished) {
         game.resetGame();
         game.hasFinished = false;
+        document.querySelector("#hide").innerText = "";
+
     } else {
         if (event.keyCode >= 65 && event.keyCode <=90){
             game.userGuess(event.key.toLowerCase()); 
+           
         }
     }
 });
 
+console.log(game.randomSpell);
