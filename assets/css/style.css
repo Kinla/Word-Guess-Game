@@ -12,23 +12,18 @@ body, .card {
     color: #ffffff;
 }
 
-html, body {
-    height: 100%;
+.card-title {
+    font-size: 1.5rem;
 }
 
 wrapper {
-    min-height: 100%;
-    align-items: stretch;
-}
-
-.card-title {
-    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
 }
 
 #main {
     background: rgb(143,149,154);
     background: rgb(143,149,154,0.7);
-    flex-grow: 1;
 }
 
 #logo {

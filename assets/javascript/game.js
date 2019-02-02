@@ -40,7 +40,7 @@ var game = {
     randomSpell: "", // the selected spell
     correctGuess: [], // chars guessed correctly
     win: 0, // total wins
-    winSound: new Audio("../music/hedwigs.mp3"),
+    winSound: new Audio("../music/hedwigs.mp3"), // somehow unable to do properly reference this???
     loss: 0, // total losses
     remainingTries: 0, // remaining guesses set to 0
     hasFinished: true, // if won or loss
@@ -118,6 +118,7 @@ var game = {
         if (this.remainingTries == 0){
             this.loss++
             this.hasFinished = true;
+            document.querySelector("#hide").innerText = "Press any key to try again.";
             return
         }
     },
