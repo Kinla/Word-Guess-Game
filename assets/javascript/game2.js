@@ -1,6 +1,3 @@
-// problem? guess the word
-"use strict";
-
 // create a list of definded words that can be guesssed
     var spell = [
     "accio",
@@ -31,7 +28,39 @@
     "evanesco",
 ];
 
-const maxTries = 9; // max # of tries
+var randomSpell: "";
+var guessedLetters: [];
+var correctGuess: [];
+var win = 0;
+var loss = 0;
+var tries = 9;
+var Finished = true;
+
+window.onload = resetGame();
+
+// reset game
+var resetGame = function (){
+    randomSpell = spell[Math.floor(Math.random()*spell.length)]; // this randomly selects a spell
+    for (var i = 0; i < this.randomSpell.length; i++){
+        this.correctGuess.push("_");
+    }
+    guessedLetters = [];
+    correctGuess: [];
+
+};
+
+var updateDisplay = function (){
+    var progress = "";
+    for (var i = 0; i < this.randomSpell.length; i++){
+        progress += (this.correctGuess[i] + " ");
+    }
+    document.querySelector("#showQuestion").innerHTML = progress;
+    document.querySelector("#showTries").innerHTML = remainingTries;
+    document.querySelector("#showGuess").innerHTML = guessedLetters;
+    document.querySelector("#showWin").innerText = win;
+    document.querySelector("#showLoss").innerText = loss;
+
+};
 
 // create entire game object
 var game = {
@@ -68,16 +97,16 @@ var game = {
         }
         document.querySelector("#showQuestion").innerHTML = progress;
         document.querySelector("#showTries").innerHTML = this.remainingTries;
-        document.querySelector("#showGuess").innerHTML = this.guessedLetters.join(", ");
+        document.querySelector("#showGuess").innerHTML = this.guessedLetters;
         document.querySelector("#showWin").innerText = this.win;
         document.querySelector("#showLoss").innerText = this.loss;
     },
 
-    // user makes guess
+    // track user's guess
     userGuess: function (letter) {
         if (this.remainingTries > 0){
-            if (this.guessedLetters.indexOf(letter) === -1) {
-                this.guessedLetters.push(letter);
+            if (this.guessedLetter.indexOf(letter) === -1) {
+                this.guessedLetter.push(letter.toUpperCase());
                 this.matchGuess(letter);
             }
         }
@@ -96,7 +125,7 @@ var game = {
         }
 
         if (position.length <=0){
-            this.remainingTries--;            
+            this.remaingingGuesses--;            
         } else {
             for (var i = 0; i < position.length; i++){
                 this.correctGuess[position[i]] = letter;
@@ -107,7 +136,7 @@ var game = {
     // check if user guess all letters in word
     checkSpell: function (){
         //if win
-        if (this.correctGuess.indexOf("_") === -1){
+        if (this.randomSpell.indexOf("_") === -1){
             this.win++
             this.hasFinished = true;
             return;
@@ -128,7 +157,7 @@ window.addEventListener("keyup", function(event){
         game.hasFinished = false;
     } else {
         if (event.keyCode >= 65 && event.keyCode <=90){
-            game.userGuess(event.key.toLowerCase()); 
+            game.userGuess(event.key.toLowerCase()); // this is unable to pass to game???
         }
     }
 });
